@@ -1,0 +1,59 @@
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #f3f3f3; /* Цвет фона контейнера */
+}
+
+#parent {
+  text-align: center;
+  padding: 20px;
+  background: #fff; /* Цвет фона контейнера */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Тень для контейнера */
+  border-radius: 10px; /* Закругление углов контейнера */
+  max-width: 400px; /* Максимальная ширина контейнера */
+}
+
+#elem {
+  padding: 15px;
+  font-size: 20px;
+  border: 2px solid #3498db; /* Граница элемента #elem */
+  border-radius: 5px; /* Закругление углов элемента #elem */
+  margin: 10px 0; /* Внешний отступ сверху и снизу */
+}
+
+#parent ul {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background: #fff; /* Цвет фона для выпадающего списка */
+  border: 1px solid #ccc; /* Граница для выпадающего списка */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для выпадающего списка */
+  border-radius: 5px; /* Закругление углов выпадающего списка */
+  width: 200px;
+  z-index: 1;
+  top: 100%;
+  display: none;
+}
+
+#parent:hover ul {
+  display: block;
+}
+
+#parent li {
+  font-size: 16px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc; /* Горизонтальная линия между элементами списка */
+}
+
+#parent li:last-child {
+  border-bottom: none; /* Убираем линию для последнего элемента списка */
+}
+
+#parent li:hover {
+  background: #3498db; /* Цвет фона при наведении на элемент списка */
+  color: #fff; /* Цвет текста при наведении на элемент списка */
+  cursor: pointer;
+}
